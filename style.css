@@ -36,7 +36,6 @@ p {
 }
 
 
-
 footer p {
     text-align: center;
     font-size: 13px;
@@ -57,12 +56,28 @@ a {
     text-decoration: none;
 }
 
+/* 项目图片 */
 a:hover {
     color: rgb(195, 86, 23);
 }
 
+.container {    
+    display: flex;
+    margin-top: 20px;
+}
 
+.project {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+}
 
+.project img {
+    width: 200px;
+    height: auto;
+    border: 2px solid black;
+}
 
 
 
