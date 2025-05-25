@@ -22,15 +22,15 @@ h1 {
     font-style: italic;
   }
 
-h2 {
+p {
     font-size: 17px;
   }
 
-h1, h2 {
+h1 {
     text-align: center;
   }
 
-p {
+.intro p {
     text-align: left;
     text-indent: 2em;
 }
@@ -51,33 +51,34 @@ hr {
     margin-top: 50px;
 }
 
+
+/* 项目图片 */
 a {
     color: black;
     text-decoration: none;
 }
 
-/* 项目图片 */
-a:hover {
-    color: rgb(195, 86, 23);
+.project:hover {
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.container {    
+.container { 
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .project {
-    padding: 10px;
+   background-color: rgb(237, 145, 63);
     margin: 10px;
-    width: 100%;
+   
     text-align: center;
+    border: 3px solid black;
 }
 
 .project img {
     width: 200px;
-    height: auto;
-    border: 2px solid black;
+    height: 260px;
 }
 
 
