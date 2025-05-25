@@ -1,12 +1,12 @@
 function getRandomComputerResult() {
-    const options = ["Rock", "Paper", "Scissors"];
+    const options = ["石头", "布", "剪刀"];
     const randomIndex = Math.floor(Math.random() * options.length);
     return options[randomIndex];
 }
 
 function hasPlayerWonTheRound(player, computer) {
     return (
-        (player === "Rock" && computer === "Scissors") || (player === "Scissors" && computer === "Paper") || (player === "Paper" && computer === "Rock")
+        (player === "石头" && computer === "剪刀") || (player === "剪刀" && computer === "布") || (player === "布" && computer === "石头")
     );
 }
 
@@ -18,12 +18,12 @@ function getRoundResults(userOption) {
 
     if (hasPlayerWonTheRound(userOption, computerResult)) {
         playerScore++;
-        return `Player wins ${userOption} beats ${computerResult}`
+        return `玩家 获胜！ ${userOption} 大于 ${computerResult}`
     }else if (computerResult === userOption) {
-        return `It's a tie! Both chose ${userOption}`;
+        return `平局！ 双方都选择了 ${userOption}`;
     }else {
         computerScore++;
-        return `Computer wins! ${computerResult} beats ${userOption}`;
+        return `电脑 获胜！ ${computerResult} 大于 ${userOption}`;
     }
 }
 
@@ -52,13 +52,13 @@ const paperBtn = document.getElementById("paper-btn");
 const scissorsBtn = document.getElementById("scissors-btn");
 
 rockBtn.addEventListener("click", function () {
-  showResults("Rock");
+  showResults("石头");
 });
 
 paperBtn.addEventListener("click", function () {
-  showResults("Paper");
+  showResults("布");
 });
 
 scissorsBtn.addEventListener("click", function () {
-  showResults("Scissors");
+  showResults("剪刀");
 });
