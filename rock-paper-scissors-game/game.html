@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>石头，剪刀，布小游戏</title>
+    <link rel="stylesheet" href="./game.css" />
+  </head>
+  <body>
+    <h1>一起来玩石头，剪刀，布游戏吧！</h1>
+    <main>
+      <details class="rules-container">
+        <summary>游戏规则</summary>
+
+        <p>你会跟电脑一起游戏</p>
+        <p>你可以选择石头，剪刀或者布，</p>
+        <p>最先赢得三分的人获胜。</p>
+
+        <p>以下是游戏中胜负规则</p>
+        <ul>
+          <li>石头大于剪刀</li>
+          <li>剪刀大于布</li>
+          <li>布大于石头</li>
+        </ul>
+        <p>
+          如果玩家和电脑选择相同（比如都出布），那么双方都不获得分数。
+        </p>
+      </details>
+
+      <div class="score-container">
+        <strong
+          >玩家得分: <span class="score" id="player-score">0</span></strong
+        >
+        <strong
+          >电脑得分:
+          <span class="score" id="computer-score">0</span></strong
+        >
+      </div>
+
+      <section class="options-container">
+        <h2>给出选择:</h2>
+        <div class="btn-container">
+          <button id="rock-btn" class="btn">石头</button>
+          <button id="paper-btn" class="btn">布</button>
+          <button id="scissors-btn" class="btn">剪刀</button>
+        </div>
+      </section>
+
+      <div class="results-container">
+        <p id="results-msg"></p>
+        <p id="winner-msg"></p>
+        <button class="btn" id="reset-game-btn">再玩一盘?</button>
+      </div>
+    </main>
+    <script src="./game.js"></script>
+  </body>
+</html>
